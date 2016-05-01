@@ -23,7 +23,9 @@ SELECT COUNT(name) FROM models where brand_name = 'Ford';
 -- 7. Select the name of any and all car brands that are not discontinued.
 SELECT name FROM brands WHERE discontinued IS NOT NULL;
 -- 8. Select rows 15-25 of the DB in alphabetical order by model name.
-SELECT * FROM models LEFT JOIN brands ORDER BY models.name ASC;
+SELECT * FROM models ORDER BY name ASC LIMIT 10 OFFSET 15;
+-- I couldn't figure out if you meant from a table or from all tables?
+
 -- 9. Select the brand, name, and year the model's brand was
 --    founded for all of the models from 1960. Include row(s)
 --    for model(s) even if its brand is not in the Brands table.
